@@ -1,0 +1,7 @@
+
+if BOARD_XMC48_RELAX_KIT
+
+config BOARD
+	default "xmc48_relax_kit"
+
+endif # BOARD_XMC48_RELAX_KIT

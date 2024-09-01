@@ -1,0 +1,5 @@
+
+config BOARD_XMC48_RELAX_KIT
+	bool "Infineon Relax Kit"
+	depends on SOC_SERIES_XMC_4XXX
+	select SOC_PART_NUMBER_F144K2048

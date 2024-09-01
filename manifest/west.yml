@@ -1,0 +1,27 @@
+
+# https://docs.zephyrproject.org/3.1.0/develop/west/manifest.html
+
+# https://github.com/zephyrproject-rtos/zephyr/issues/35075
+
+manifest:
+
+  remotes:
+    - name: zephyr
+      url-base: https://github.com/zephyrproject-rtos
+    - name: cooked
+      url-base: https://github.com/cooked
+
+  projects:
+    - name: zephyr
+      remote: cooked
+      repo-path: zephyr
+      revision: main #v3.2.0
+      import:
+        name-allowlist:
+          - cmsis
+
+    # use development hal_infineon
+    - name: hal_infineon
+      remote: zephyr
+      repo-path: hal_infineon
+      path: modules/hal/infineon
